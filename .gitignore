@@ -34,3 +34,10 @@
 !/app/assets/builds/.keep
 
 /node_modules
+.idea/.gitignore
+.idea/disaster-information-makati.iml
+.gitignore
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.gitignore

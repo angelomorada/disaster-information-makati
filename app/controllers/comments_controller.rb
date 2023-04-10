@@ -22,7 +22,11 @@ class CommentsController < ApplicationController
   def edit; end
 
   def update
-
+    if @comment.update(comment_params)
+      redirect_to post_comments_path(@post)
+    else
+      render :edit
+    end
   end
 
   private
@@ -33,5 +37,9 @@ class CommentsController < ApplicationController
 
   def comment_params
     params.require(:comment).permit(:content)
+  end
+
+  def set_comment
+    @comment = @post.comments.find(params[:id])
   end
 end
